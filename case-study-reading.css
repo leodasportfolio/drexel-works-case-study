@@ -118,8 +118,7 @@
     margin-bottom: clamp(21.25px, 1.887vw, 27.2px);
   }
 
-  .case-study-page .reading-guide summary {
-    gap: 13.6px;
+  .case-study-page .reading-guide-title {
     padding-block: clamp(13.6px, 1.122vw, 16.15px);
     font-size: clamp(16.065px, 1.6983vw, 24.48px);
   }

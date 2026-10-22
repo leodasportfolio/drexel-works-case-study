@@ -8,42 +8,66 @@
 <link rel="stylesheet" href="case-study-main.css">
 <link rel="stylesheet" href="case-study-compact.css">
 <link rel="stylesheet" href="case-study-reading.css">
+<link rel="stylesheet" href="case-study-cards.css">
+<link rel="stylesheet" href="case-study-solution.css">
+<link rel="stylesheet" href="case-study-cover.css">
+<link rel="stylesheet" href="case-study-rail.css">
+<link rel="stylesheet" href="case-study-spacing.css">
+<link rel="stylesheet" href="case-study-refinements.css">
 </head>
 <body class="case-study-page">
 <a class="skip-link" href="#the-problem">Skip to the case study</a>
-<header class="site-header"><a class="brand" href="scroll-sample.html#top" aria-label="Drexel Works, back to top"><img src="assets/drexel-university-logo-header-transparent.png" alt="Drexel University" width="180" height="56"></a><nav class="section-nav" aria-label="Case study sections"><a href="#the-problem">Problem</a><a href="#approach">Approach</a><a href="#the-idea">Solution</a><a href="#results">Impact</a></nav></header>
+<nav class="chapter-rail" aria-label="Case study sections">
+  <a class="chapter-link" href="#overview" aria-label="Overview section"><span class="chapter-label" aria-hidden="true">Overview</span><span class="chapter-dot" aria-hidden="true"></span></a>
+  <a class="chapter-link" href="#the-problem" aria-label="Problem section"><span class="chapter-label" aria-hidden="true">Problem</span><span class="chapter-dot" aria-hidden="true"></span></a>
+  <a class="chapter-link" href="#approach" aria-label="Approach section"><span class="chapter-label" aria-hidden="true">Approach</span><span class="chapter-dot" aria-hidden="true"></span></a>
+  <a class="chapter-link" href="#the-idea" aria-label="Solution section"><span class="chapter-label" aria-hidden="true">Solution</span><span class="chapter-dot" aria-hidden="true"></span></a>
+  <a class="chapter-link" href="#results" aria-label="Impact section"><span class="chapter-label" aria-hidden="true">Impact</span><span class="chapter-dot" aria-hidden="true"></span></a>
+</nav>
 <main id="top">
-  <section class="hero section" aria-label="Drexel Works project overview"><div class="inner">
-          <div class="project-hero reveal in">
-            <div class="project-copy"><p class="project-kicker">Drexel Works · UX/UI case study</p><h1><span>Designing a Better Way</span><span>to Find Campus Jobs</span></h1><p class="lede">A UX/UI case study on helping Drexel students find relevant part-time jobs without guessing eligibility.</p><span class="project-status">Concept project</span></div>
+  <section class="hero section" id="overview" aria-label="Drexel Works project overview"><div class="inner">
+          <div class="cover-intro">
+            <p class="cover-kicker">Drexel Works</p>
+            <h1>Designing a Better Way to Find Campus Jobs</h1>
+            <p class="cover-lede">Helping Drexel students find relevant part-time jobs without guessing eligibility.</p>
           </div>
-            <div class="facts"><div><span>Role</span><b>UI/UX designer</b></div><div><span>Focus</span><b>Product design</b></div><div><span>Timeline</span><b>6 months</b></div><div><span>Deliverable</span><b>Mobile app concept</b></div></div>
+          <div class="cover-gallery" role="group" aria-label="Drexel Works preview: Welcome, eligibility selection, and application success">
+            <figure class="cover-phone cover-phone--welcome"><img src="assets/drexel-works-frame-welcome.png" alt="Drexel Works welcome screen with the Drexel logo and sign-in button" width="483" height="974" fetchpriority="high" decoding="async"></figure>
+            <figure class="cover-phone cover-phone--eligibility"><img src="assets/drexel-works-frame-eligibility.png" alt="Eligibility selection screen showing F-1, work-study, and domestic student options" width="483" height="974" decoding="async"></figure>
+            <figure class="cover-phone cover-phone--success"><img src="assets/drexel-works-frame-submission-success.png" alt="Application submitted successfully screen showing the submitted job and confirmation" width="483" height="974" decoding="async"></figure>
+          </div>
+            <div class="facts"><div><span>Role</span><b>UI/UX designer</b></div><div><span>Focus</span><b>Product design</b></div><div><span>Timeline</span><b>6 months</b></div><div><span>Deliverable</span><b>Mobile app</b></div></div>
 
   </div></section>
   <section class="section problem-section" id="the-problem" aria-labelledby="problem-title"><div class="inner">
-    <details class="reading-guide"><summary>Things you need to know before reading <img class="guide-chevron" src="assets/main-guide-chevron.svg" width="29" height="17" alt=""></summary><div class="reading-guide-content">
+    <section class="reading-guide" aria-labelledby="reading-guide-title"><h2 class="reading-guide-title" id="reading-guide-title">Things you need to know before reading</h2><div class="reading-guide-content">
+      <div class="reading-guide-column">
       <section><h3>Who are F-1 students?</h3><p>International students studying in the U.S. on an F-1 visa. They can generally work on campus for up to 20 hours a week during classes. Off-campus work needs separate authorization. <a href="https://drexel.edu/studentlife/student-success/international-student-support/current-students/employment/on-campus-employment">Drexel guidance</a></p></section>
       <section><h3>Who are work-study students?</h3><p>Students who receive a work-study award through financial aid. It lets them earn money through eligible part-time jobs. <a href="https://drexel.edu/drexelcentral/finaid/work-study/">Drexel work-study</a></p></section>
+      </div>
+      <div class="reading-guide-column">
       <section><h3>Why are some listings work-study only?</h3><p>Those jobs use funding reserved for students with a work-study award. Domestic students without an award and students with only F-1 status cannot use that funding. <a href="https://fsapartners.ed.gov/knowledge-center/fsa-handbook/2025-2026/vol1/ch2-us-citizenship-eligible-noncitizens">Federal aid eligibility</a></p></section>
       <section><h3>Can students without work-study still apply?</h3><p>If the listing says “work-study preferred,” they may still be considered. If it says “work-study only,” they need an award. Check with the employer if unsure.</p></section>
-    </div></details>
+      </div>
+    </div></section>
     <p class="eyebrow">Problem</p>
     <h2 id="problem-title">Students struggled to find part-time campus jobs because openings were scattered across different platforms.</h2>
     <p class="body-copy">Listings often lacked clear eligibility information for F-1 students, domestic students, and students with work-study awards. Outdated openings made the search even more frustrating.</p>
   </div></section>
   <section class="section approach-section" id="approach" aria-labelledby="survey-title"><div class="inner">
     <p class="eyebrow">Approach</p><h2 id="survey-title">I wanted to know if other students felt the same.</h2>
-    <p class="body-copy">I first surveyed 84 Drexel students to understand whether others faced the same challenges. After discovering that many students shared this experience, I conducted in-depth interviews with 10 students, including five undergraduate and five graduate students, to better understand their needs, frustrations, and job-search experiences.</p>
+    <p class="body-copy">To find out, I surveyed and interviewed students about their campus job search. They shared the same uncertainty: which jobs they could apply for, where to find openings, and whether listing details were still current.</p>
+    <dl class="study-facts" aria-label="Research participation">
+      <div><dt>Students surveyed</dt><dd>84 students</dd></div>
+      <div><dt>Students interviewed</dt><dd>10 students</dd></div>
+      <div><dt>Interview sample</dt><dd>5 graduate, 5 undergrad</dd></div>
+    </dl>
     <div class="findings-evidence findings-evidence--approach">
       <div class="findings-grid" aria-label="Survey findings from 84 Drexel students">
-        <article class="finding finding--scattered"><h3>Scattered job search</h3><div class="finding-value"><strong>68%</strong><img class="finding-emoji" src="assets/main-emoji-scattered.png" alt="" width="179" height="179"></div><p>said it was hard to tell which jobs they were eligible for.</p></article>
-        <article class="finding finding--eligibility"><h3>Visa eligibility</h3><div class="finding-value"><strong>72%</strong><img class="finding-emoji" src="assets/main-emoji-eligibility.png" alt="" width="148" height="148"></div><p>said it was hard to tell which jobs they were eligible for.</p></article>
-        <article class="finding finding--manage"><h3>One place to manage</h3><div class="finding-value"><strong>81%</strong><img class="finding-emoji" src="assets/main-emoji-manage.png" alt="" width="139" height="139"></div><p>said it was hard to tell which jobs they were eligible for.</p></article>
-        <article class="finding finding--outdated"><h3>Outdated listings</h3><div class="finding-value"><strong>59%</strong><img class="finding-emoji" src="assets/main-emoji-outdated.png" alt="" width="130" height="130"></div><p>found listings with missing details or outdated information.</p></article>
-      </div>
-      <div class="evidence-photos" aria-label="Student research sessions">
-        <figure class="evidence-photo evidence-photo--research-one"><img src="assets/main-research-interview-1.png" alt="A student interview about campus job searching, with a laptop used to take notes" width="4032" height="3024" loading="lazy" decoding="async"></figure>
-        <figure class="evidence-photo evidence-photo--research-two"><img src="assets/main-research-interview-2.png" alt="Another student sharing their campus job-search experience during an interview" width="4032" height="3024" loading="lazy" decoding="async"></figure>
+        <article class="finding finding--scattered"><div class="finding-value"><strong>68%</strong></div><h3>Scattered job search</h3><p>said it was hard to tell which jobs they were eligible for.</p></article>
+        <article class="finding finding--eligibility"><div class="finding-value"><strong>72%</strong></div><h3>Visa eligibility</h3><p>said it was hard to tell which jobs they were eligible for.</p></article>
+        <article class="finding finding--manage"><div class="finding-value"><strong>81%</strong></div><h3>One place to manage</h3><p>said it was hard to tell which jobs they were eligible for.</p></article>
+        <article class="finding finding--outdated"><div class="finding-value"><strong>59%</strong></div><h3>Outdated listings</h3><p>found listings with missing details or outdated information.</p></article>
       </div>
     </div>
     <p class="voices-summary">The survey results showed the pattern. These perspectives made the uncertainty behind the numbers easier to understand.</p>
@@ -62,38 +86,29 @@
   <section class="section solution-section" id="the-idea" aria-labelledby="solution-title"><div class="inner">
     <p class="eyebrow">Solution</p><h2 id="solution-title">One place to find campus jobs and follow applications.</h2>
     <p class="body-copy">Drexel Works brings campus jobs, eligibility details, and application updates together.</p>
-    <div class="screen-carousel" role="region" aria-roledescription="carousel" aria-label="Four key Drexel Works screens" tabindex="0">
-      <div class="screen-carousel-stage">
-        <div class="screen-slides"><figure class="screen-slide" id="screen-0" aria-label="1 of 4: Home"><div class="screen-image-stage"><img src="assets/drexel-works-frame-dashboard.png" alt="Home screen showing the application tracker and jobs by department" width="483" height="974"></div><figcaption class="screen-caption"><h3>Home</h3><p>Students can track their applications and browse jobs across campus departments from the home screen.</p></figcaption></figure>
-<figure class="screen-slide" id="screen-1" aria-label="2 of 4: Search" hidden><div class="screen-image-stage"><img src="assets/drexel-works-frame-search.png" alt="Job search with eligibility labels, pay, weekly hours, and a filter button" width="483" height="974" loading="lazy"></div><figcaption class="screen-caption"><h3>Search</h3><p>Students can filter jobs and quickly check who can apply, the pay, and weekly hours.</p></figcaption></figure>
-<figure class="screen-slide" id="screen-2" aria-label="3 of 4: Job details" hidden><div class="screen-image-stage"><img src="assets/drexel-works-frame-rec-center-comparison-v2.png" alt="Rec Center Front Desk listing with F-1 eligibility, pay, hours, and requirements" width="483" height="974" loading="lazy"></div><figcaption class="screen-caption"><h3>Job details</h3><p>Students can check the pay, hours, and requirements before deciding to apply.</p></figcaption></figure>
-<figure class="screen-slide" id="screen-3" aria-label="4 of 4: Application form" hidden><div class="screen-image-stage"><img src="assets/drexel-works-frame-application-form.png" alt="Application form pre-filled from a Drexel profile with a change résumé option" width="483" height="974" loading="lazy"></div><figcaption class="screen-caption"><h3>Application form</h3><p>Profile details are filled in, so students only need to review them, update their résumé, and apply.</p></figcaption></figure></div>
-      <div class="screen-controls" role="group" aria-label="App screen navigation">
-        <button class="screen-arrow screen-arrow--prev" type="button" aria-label="Previous app screen" disabled><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M26 16H6m10-10L6 16l10 10"/></svg></button>
-      <div class="screen-dots" role="group" aria-label="Choose an app screen">
-        <button class="screen-dot" type="button" data-screen="0" aria-label="Show screen 1 of 4: Home" aria-controls="screen-0" aria-current="true"></button>
-        <button class="screen-dot" type="button" data-screen="1" aria-label="Show screen 2 of 4: Search" aria-controls="screen-1"></button>
-        <button class="screen-dot" type="button" data-screen="2" aria-label="Show screen 3 of 4: Job details" aria-controls="screen-2"></button>
-        <button class="screen-dot" type="button" data-screen="3" aria-label="Show screen 4 of 4: Application form" aria-controls="screen-3"></button>
-      </div>
-        <button class="screen-arrow screen-arrow--next" type="button" aria-label="Next app screen"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M6 16h20M16 6l10 10-10 10"/></svg></button>
-      </div>
-      </div>
-      <p class="screen-status" aria-live="polite" aria-atomic="true">Screen 1 of 4: Home</p>
+    <div class="solution-showcase" role="group" aria-label="Drexel Works screens in order: Home, Search, Job details, Application form">
+      <figure class="solution-phone"><img src="assets/drexel-works-frame-dashboard.png" alt="Home screen showing Welcome back, San, the application tracker, and jobs by department" width="483" height="974" loading="lazy" decoding="async"></figure>
+      <figure class="solution-phone solution-phone--screen"><div class="solution-display"><img src="assets/drexel-works-frame-search.png" alt="Job search with eligibility labels, pay, weekly hours, and a filter button" width="483" height="974" loading="lazy" decoding="async"></div></figure>
+      <figure class="solution-phone solution-phone--screen"><div class="solution-display"><img src="assets/drexel-works-frame-rec-center-comparison-v2.png" alt="Rec Center Front Desk listing with F-1 eligibility, pay, hours, and requirements" width="483" height="974" loading="lazy" decoding="async"></div></figure>
+      <figure class="solution-phone solution-phone--screen solution-phone--application"><div class="solution-display"><img src="assets/drexel-works-frame-application-form-clean.png" alt="Application form pre-filled from a Drexel profile with a change résumé option" width="883" height="1781" loading="lazy" decoding="async"></div></figure>
     </div>
+    <ol class="solution-steps" role="list" aria-label="How Drexel Works supports the campus job search">
+      <li><span class="solution-step-number" aria-hidden="true">1</span><div><h3>Home</h3><p>Students can track their applications and browse jobs across campus departments from the home screen.</p></div></li>
+      <li><span class="solution-step-number" aria-hidden="true">2</span><div><h3>Search</h3><p>Students can filter jobs and quickly check who can apply, the pay, and weekly hours.</p></div></li>
+      <li><span class="solution-step-number" aria-hidden="true">3</span><div><h3>Job details</h3><p>Students can check the pay, hours, and requirements before deciding to apply.</p></div></li>
+      <li><span class="solution-step-number" aria-hidden="true">4</span><div><h3>Application form</h3><p>Profile details are filled in, so students only need to review them, update their résumé, and apply.</p></div></li>
+    </ol>
   </div></section>
   <section class="section impact-section" id="results" aria-labelledby="results-title"><div class="inner">
     <p class="eyebrow">Impact after student testing</p><h2 id="results-title">Here’s what happened after testing with students.</h2>
     <p class="body-copy">After testing the prototype with 30 students, I asked them about the experience. Their responses showed that Drexel Works made eligibility clearer, reduced unnecessary searching, and helped them move toward applying with greater confidence.</p>
     <div class="findings-evidence findings-evidence--impact">
       <div class="findings-grid" aria-label="Student testing results">
-        <article class="finding finding--eligibility"><h3>Find an eligible role</h3><div class="finding-value"><strong>42%</strong><img class="finding-emoji" src="assets/impact-faster-transparent.png" alt="" width="148" height="148"></div><p>less time spent finding a job that matched the student’s eligibility.</p></article>
-        <article class="finding finding--manage"><h3>Fewer dead ends</h3><div class="finding-value"><strong>31%</strong><img class="finding-emoji" src="assets/impact-deadends-transparent.png" alt="" width="139" height="139"></div><p>fewer irrelevant or unavailable listings opened during the task.</p></article>
-        <article class="finding finding--confidence"><h3>Application confidence</h3><div class="finding-value"><strong>2.4<span class="metric-suffix">x</span></strong><img class="finding-emoji" src="assets/impact-clarity-transparent.png" alt="" width="130" height="130"></div><p>more participants reached Apply Now without help.</p></article>
-        <article class="finding finding--clarity"><h3>Eligibility clarity</h3><div class="finding-value"><strong>86%</strong><img class="finding-emoji" src="assets/impact-confidence-transparent.png" alt="" width="179" height="143"></div><p>understood the eligibility badges on their first pass.</p></article>
+        <article class="finding finding--eligibility"><div class="finding-value"><strong>42%</strong></div><h3>Find an eligible role</h3><p>less time spent finding a job that matched the student’s eligibility.</p></article>
+        <article class="finding finding--manage"><div class="finding-value"><strong>31%</strong></div><h3>Fewer dead ends</h3><p>fewer irrelevant or unavailable listings opened during the task.</p></article>
+        <article class="finding finding--clarity"><div class="finding-value"><strong>86%</strong></div><h3>Eligibility clarity</h3><p>understood the eligibility badges on their first pass.</p></article>
       </div>
       <div class="evidence-photos" aria-label="Prototype testing with students">
-        <figure class="evidence-photo evidence-photo--testing-one"><img src="assets/main-user-testing-1.png" alt="A student holding the Drexel Works prototype on a phone during user testing" width="768" height="1024" loading="lazy" decoding="async"></figure>
         <figure class="evidence-photo evidence-photo--testing-two"><img src="assets/main-user-testing-home.jpeg" alt="A student exploring the Drexel Works home screen on a phone during user testing" width="768" height="1024" loading="lazy" decoding="async"></figure>
       </div>
     </div>
@@ -111,13 +126,12 @@
 
     <section class="results-summary" aria-labelledby="improvement-title">
       <h3 id="improvement-title">The biggest improvement was</h3>
-      <div class="results-summary-copy"><img class="results-summary-badge" src="assets/main-improvement-badge.svg" width="52" height="52" alt=""><p>By centralizing campus part-time jobs in one place, we made it easier for students to find relevant roles, identify which jobs matched their visa eligibility, apply faster, and track live application updates without switching platforms.</p></div>
+      <div class="results-summary-copy"><p>By centralizing campus part-time jobs in one place, we made it easier for students to find relevant roles, identify which jobs matched their visa eligibility, apply faster, and track live application updates without switching platforms.</p></div>
     </section>
               <section class="learning" aria-labelledby="case-study-conclusion-title">
             <h3 id="case-study-conclusion-title">What I learned</h3>
             <p class="brain-dump-intro">Working on Drexel Works helped me see that finding a campus job is about more than discovering openings. Students also need clear information about who can apply, what the job requires, and what happens after applying. Bringing these steps together became the focus of my design.</p>
           </section>
-    <section class="process-link" id="my-process" aria-labelledby="process-link-title"><h3 id="process-link-title">Curious how I developed the idea?</h3><p>Explore my brainstorming, early ideas, and the decisions behind Drexel Works.</p><a href="ideation.html">View my process and ideation <span aria-hidden="true">→</span></a></section>
   </div></section>
 </main>
 <footer class="case-study-footer">
@@ -137,6 +151,5 @@
 </footer>
 <script src="assets/gsap-3.13.0.min.js" defer></script>
 <script src="case-study.js" defer></script>
-<script src="case-study-nav.js" defer></script>
 </body>
 </html>

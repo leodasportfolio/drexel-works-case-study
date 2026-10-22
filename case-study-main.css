@@ -121,13 +121,21 @@
   margin-bottom: clamp(28px, 2.5vw, 36px);
 }
 
-.case-study-page .reading-guide summary {
-  justify-content: flex-start;
-  gap: 18px;
+.case-study-page .reading-guide-title {
+  margin: 0;
+  color: var(--navy);
+  letter-spacing: normal;
   padding-block: clamp(18px, 1.5278vw, 22px);
   font-size: clamp(23px, 2.5vw, 36px);
   font-weight: 600;
   line-height: 1.2;
+}
+
+.case-study-page .reading-guide-column {
+  display: grid;
+  min-width: 0;
+  align-content: start;
+  row-gap: inherit;
 }
 
 .case-study-page .guide-chevron {
@@ -694,9 +702,7 @@
     font-size: 13px;
   }
 
-  .case-study-page .reading-guide summary {
-    justify-content: space-between;
-    gap: 12px;
+  .case-study-page .reading-guide-title {
     font-size: 23px;
     line-height: 1.3;
   }

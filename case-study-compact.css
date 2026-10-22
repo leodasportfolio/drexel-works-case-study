@@ -117,8 +117,7 @@ html::-webkit-scrollbar-thumb:hover { background: #435471; }
 
 .case-study-page .problem-section { padding-top: 22px; padding-bottom: clamp(28px, 2.78vw, 40px); }
 .case-study-page .reading-guide { margin-bottom: clamp(25px, 2.22vw, 32px); }
-.case-study-page .reading-guide summary {
-  gap: 16px;
+.case-study-page .reading-guide-title {
   padding-block: clamp(16px, 1.32vw, 19px);
   font-size: clamp(21px, 2.22vw, 32px);
 }
@@ -382,7 +381,7 @@ html::-webkit-scrollbar-thumb:hover { background: #435471; }
   .case-study-page .eyebrow { margin-left: 0; font-size: 12px; }
   .case-study-page .facts { gap: 19px; }
   .case-study-page .facts b { font-size: 16px; }
-  .case-study-page .reading-guide summary { gap: 11px; font-size: 21px; }
+  .case-study-page .reading-guide-title { font-size: 21px; }
   .case-study-page .guide-chevron { flex-basis: 20px; width: 20px; }
   .case-study-page .findings-evidence,
   .case-study-page .findings-evidence--impact { gap: 21px; margin-top: 25px; }

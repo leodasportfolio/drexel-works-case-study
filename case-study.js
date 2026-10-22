@@ -194,23 +194,50 @@
   }, { passive: true });
   settleTransition();
 
-  const links = Array.from(document.querySelectorAll('.section-nav a'));
+})();
+
+// Section tracking must also run on the static Solution page without a carousel.
+(() => {
+  const links = Array.from(document.querySelectorAll('.section-nav a, .chapter-rail a'));
+  if (!links.length) return;
   const sections = links.map(link => document.getElementById(link.hash.slice(1)));
+  const rail = document.querySelector('.chapter-rail');
   let frame = 0;
   const updateSection = () => {
     frame = 0;
+    const readingLine = window.innerHeight * .35;
+    const bounds = sections.map(section => section?.getBoundingClientRect() ?? null);
     let current = -1;
-    sections.forEach((section, i) => {
-      if (section.getBoundingClientRect().top <= window.innerHeight * .35) current = i;
+    bounds.forEach((rect, i) => {
+      if (rect && rect.top <= readingLine) current = i;
     });
+    const atEnd = current >= 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
     links.forEach((link, i) => {
       if (i === current) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
+      // Derive completion from position every time, never from visit history.
+      if (i < current || atEnd) link.setAttribute('data-complete', 'true');
+      else link.removeAttribute('data-complete');
     });
+    if (rail) {
+      let progress = 0;
+      if (current >= 0) {
+        if (current === links.length - 1 || atEnd) progress = 1;
+        else {
+          const start = bounds[current].top;
+          const end = bounds[current + 1]?.top ?? start + 1;
+          const fraction = Math.max(0, Math.min(1, (readingLine - start) / Math.max(1, end - start)));
+          progress = (current + fraction) / Math.max(1, links.length - 1);
+        }
+      }
+      rail.style.setProperty('--chapter-progress', String(progress));
+    }
   };
   window.addEventListener('scroll', () => {
     if (!frame) frame = requestAnimationFrame(updateSection);
   }, { passive: true });
   window.addEventListener('resize', updateSection, { passive: true });
+  window.addEventListener('load', updateSection, { once: true });
+  window.addEventListener('pageshow', updateSection);
   updateSection();
 })();
